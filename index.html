@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Financial Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Smart Financial Calculator</h1>
+
+<div class="container">
+
+<!-- Basic Calculator -->
+<div class="card">
+<h2>Basic Calculator</h2>
+
+<input type="number" id="num1" placeholder="Enter number 1">
+<input type="number" id="num2" placeholder="Enter number 2">
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="mul()">Multiply</button>
+<button onclick="div()">Divide</button>
+
+<p id="result"></p>
+</div>
+
+
+<!-- EMI Calculator -->
+<div class="card">
+<h2>EMI Calculator</h2>
+
+<input type="number" id="loan" placeholder="Loan Amount">
+<input type="number" id="rate" placeholder="Interest Rate (%)">
+<input type="number" id="time" placeholder="Time (Months)">
+
+<button onclick="calculateEMI()">Calculate EMI</button>
+
+<p id="emiResult"></p>
+</div>
+
+
+<!-- SIP Calculator -->
+<div class="card">
+<h2>SIP Calculator</h2>
+
+<input type="number" id="investment" placeholder="Monthly Investment">
+<input type="number" id="returnRate" placeholder="Expected Return (%)">
+<input type="number" id="years" placeholder="Years">
+
+<button onclick="calculateSIP()">Calculate SIP</button>
+
+<p id="sipResult"></p>
+</div>
+
+
+<!-- Expense Split -->
+<div class="card">
+<h2>Expense Split</h2>
+
+<input type="number" id="bill" placeholder="Total Bill">
+<input type="number" id="people" placeholder="Number of People">
+
+<button onclick="splitExpense()">Split Bill</button>
+
+<p id="splitResult"></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
