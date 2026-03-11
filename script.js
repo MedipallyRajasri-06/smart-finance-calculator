@@ -57,7 +57,18 @@ let months = document.getElementById("years").value*12
 let futureValue = investment*((Math.pow(1+rate,months)-1)/rate)*(1+rate)
 
 document.getElementById("sipResult").innerText = "Future Value: " + futureValue.toFixed(2)
+let ctx = document.getElementById('sipChart')
 
+new Chart(ctx, {
+type: 'line',
+data: {
+labels: ["Year1","Year2","Year3","Year4","Year5"],
+datasets: [{
+label: "Investment Growth",
+data: [10000,20000,30000,45000,60000]
+}]
+}
+})
 }
 
 
