@@ -84,3 +84,24 @@ let each = bill/people
 document.getElementById("splitResult").innerText = "Each person pays: " + each
 
 }
+
+
+function convertCurrency(){
+
+let amount = document.getElementById("amount").value
+let from = document.getElementById("fromCurrency").value
+let to = document.getElementById("toCurrency").value
+
+fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+.then(response => response.json())
+.then(data => {
+
+let rate = data.rates[to]
+let result = amount * rate
+
+document.getElementById("currencyResult").innerText =
+"Converted Amount: " + result.toFixed(2) + " " + to
+
+})
+
+}

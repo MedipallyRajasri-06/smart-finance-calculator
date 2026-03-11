@@ -11,6 +11,7 @@
 
 <h1>Smart Financial Calculator</h1>
 
+
 <div class="container">
 
 <!-- Basic Calculator -->
@@ -20,12 +21,38 @@
 <input type="number" id="num1" placeholder="Enter number 1">
 <input type="number" id="num2" placeholder="Enter number 2">
 
+
 <button onclick="add()">Add</button>
 <button onclick="sub()">Subtract</button>
 <button onclick="mul()">Multiply</button>
 <button onclick="div()">Divide</button>
 
 <p id="result"></p>
+</div>
+
+<!-- currency converter -->
+<div class="card">
+<h2>Currency Converter</h2>
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+<select id="fromCurrency">
+<option value="USD">USD</option>
+<option value="INR">INR</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+</select>
+
+<select id="toCurrency">
+<option value="INR">INR</option>
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+</select>
+
+<button onclick="convertCurrency()">Convert</button>
+
+<p id="currencyResult"></p>
 </div>
 
 
